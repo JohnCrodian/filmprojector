@@ -24,7 +24,12 @@
     <div class="navbar-header">
     <a href='/'><button type="button" class="btn btn-default navbar-btn">Home</button></a>
     <a href='/screenings/show'><button type="button" class="btn btn-default navbar-btn">View Screenings by Month</button></a>
-	<%= date_select %>     
+
+	    <%= form_tag(application_search_path, :method => "get", id: "search-form") do %>
+	    <%= date_select :search, "date" %>
+	    <%= submit_tag "Screenings by Date", :name => nil %>
+		<% end %>
+
     </div>
   </div>
 </nav>

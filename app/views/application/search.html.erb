@@ -1,0 +1,6 @@
+<div class="calendar-container">
+	<h1 class="subject-heading">What's showing on <%= @searchDate %></h1>
+	<% @screenings.each do |screening| %>
+		<p><a href=<%=screening.link %> > "<%= screening.title %>" at <%= screening.location %></a></p>
+	<% end %>
+</div>

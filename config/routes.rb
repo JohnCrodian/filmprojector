@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
 root 'home#index'
 
+get 'application/search', to: 'application#search' 
 post 'screenings/scrape_bryn_mawr'
 post 'screenings/scrape_roxy'
 post 'screenings/scrape_ambler'
