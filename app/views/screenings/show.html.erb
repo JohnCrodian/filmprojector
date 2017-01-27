@@ -1,0 +1,22 @@
+
+<% @screenings.each do |listing| %>
+  
+  <ul>
+	<li><%= listing.title %></li>
+	<li><%= listing.showtime %></li>
+	<li><%= listing.location %></li>
+	<li><a href=<%= listing.link %> > Link to listing </a></li>
+  </ul>
+
+<% end %>
+
+<%= month_calendar events: @screenings.each do |date| %>
+  <%= date %>
+
+  <% date.each do |meeting| %>
+    <div>
+      <%= meeting.title %>
+      <%= meeting.location %>
+    </div>
+  <% end %>
+<% end %>

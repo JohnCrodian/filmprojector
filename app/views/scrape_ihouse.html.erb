@@ -1,0 +1,11 @@
+<h1>International House Showtimes</h1>
+
+<% @screeningArray.each do |entry| %>
+  <ul>
+  <li><%= entry.title %></li>
+  <li><%= entry.showtime%></li>
+  <li><%= entry.location %></li>
+    <li><a href=http://www.ihousephilly.org<%= entry.link %> > Link to listing </a></li>
+  </ul>
+<% end %>
+
