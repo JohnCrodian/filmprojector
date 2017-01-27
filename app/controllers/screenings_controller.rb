@@ -27,7 +27,7 @@ end
       doc = Nokogiri::HTML(open("http://filmadelphia.org/signature-series/"))
       screening = doc.css('h5')
       screening.each do |entry|
-        title = entry.xpath('.//a/br/preceding-sibling::text()').text
+        title = entry.xpath('.//a/br/preceding-sibling::text()').text.titleize
         showtime = DateTime.parse(entry.xpath('.//a/text()').text).to_date
         location = "Roxy Theatre"
         link = entry.css('a')[0]['href']
@@ -63,7 +63,7 @@ end
           screening = doc.css('.event-preview-container')
 
           screening.each do |entry|
-            title = entry.css('.event-title').text
+            title = entry.css('.event-title').text.encode
             showtime = DateTime.parse(entry.css('.event-details').text).to_date
             location = "International House"
             linkleader = "http://www.ihousephilly.org"

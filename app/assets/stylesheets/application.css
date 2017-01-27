@@ -13,3 +13,39 @@
  *= require_tree .
  *= require_self
  */
+
+/* *= require simple_calendar*/
+
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans");
+
+.company-name {
+	font-family: "Permanent Marker";
+	font-size: 75px;
+	color: white;
+}
+
+.blurb {
+	font-family: "PT Sans";
+	font-size: 20px;
+	color: white;
+}
+.hero-unit {
+	height: 400px;
+	background-image: url('seats1.jpg');
+	background-size: 100% 100%;
+
+	
+}
+
+.clear {
+	height: 30%;
+}
+.centered-content {
+	text-align: center;
+	width: 625px;
+	margin: auto;
+	
+}
+
+

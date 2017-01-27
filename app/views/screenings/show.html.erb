@@ -1,22 +1,11 @@
+<div class="calendar-container">
+<%= month_calendar events: @screenings.each do |date, screenings| %>
+  <%= date.strftime("%d") %>
 
-<% @screenings.each do |listing| %>
-  
-  <ul>
-	<li><%= listing.title %></li>
-	<li><%= listing.showtime %></li>
-	<li><%= listing.location %></li>
-	<li><a href=<%= listing.link %> > Link to listing </a></li>
-  </ul>
-
-<% end %>
-
-<%= month_calendar events: @screenings.each do |date| %>
-  <%= date %>
-
-  <% date.each do |meeting| %>
+  <% screenings.each do |screening| %>
     <div>
-      <%= meeting.title %>
-      <%= meeting.location %>
+    <a href=<%= screening.link %> >"<%= screening.title %>" @ <%= screening.location %> </a>
     </div>
   <% end %>
 <% end %>
+</div>
