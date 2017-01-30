@@ -15,7 +15,7 @@
 <div class="clear"></div>
 	<div class="centered-content"> 
 	    <h1 class="company-name">Philm Projector</h1>
-	    <h2 class="blurb">A guide to repertory film screenings in the Philadelphia Area</h2>
+	    <h2 class="blurb">A guide to repertory film screenings in the Philadelphia area</h2>
 	</div>
 </div>
 
@@ -23,13 +23,18 @@
   <div class="container-fluid">
     <div class="navbar-header">
     <a href='/'><button type="button" class="btn btn-default navbar-btn">Home</button></a>
-    <a href='/screenings/show'><button type="button" class="btn btn-default navbar-btn">View Screenings by Month</button></a>
 
-	    <%= form_tag(application_search_path, :method => "get", id: "search-form") do %>
+    	<button type="button"><%= form_tag(application_search_path, :method => "get", id: "search-form") do %>
 	    <%= date_select :search, "date" %>
-	    <%= submit_tag "Screenings by Date", :name => nil %>
+	    <%= submit_tag "View Screenings by Date", :name => nil %>
 		<% end %>
+		</button>
 
+    <a href='/screenings/show'><button type="button" class="btn btn-default navbar-btn">View Screenings by Month</button></a>
+    
+	   
+		
+	
     </div>
   </div>
 </nav>

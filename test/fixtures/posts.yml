@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  screening: MyString
+  avatar_file_name: MyString
+  avatar_content_type: MyString
+  avatar_file_size: MyString
+
+two:
+  screening: MyString
+  avatar_file_name: MyString
+  avatar_content_type: MyString
+  avatar_file_size: MyString

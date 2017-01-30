@@ -1,0 +1,9 @@
+<%= form_for Post.new do |f| %>
+
+<%= f.select(:screenings, options_from_collection_for_select(@screenings, 'id', 'title')) %><br>
+
+<%= f.label :avatar %><br>
+<%= f.file_field :avatar %>
+<%= f.submit "Make Post" %>
+
+<% end %>

@@ -10,12 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170126222306) do
+ActiveRecord::Schema.define(version: 20170130164529) do
 
   create_table "calendars", force: :cascade do |t|
     t.date     "start_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.string   "avatar_file_size"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  create_table "posts_screenings", force: :cascade do |t|
+    t.integer "screening_id"
+    t.integer "post_id"
+    t.index ["post_id"], name: "index_posts_screenings_on_post_id"
+    t.index ["screening_id"], name: "index_posts_screenings_on_screening_id"
   end
 
   create_table "screenings", force: :cascade do |t|

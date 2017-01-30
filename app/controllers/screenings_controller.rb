@@ -7,6 +7,12 @@ class ScreeningsController < ApplicationController
   	@screenings = Screening.order(:showtime)
   end
 
+  def create_post
+    @post = Post.new
+    @screenings = Screening.all
+
+  end
+
   def scrape_bryn_mawr
     require 'open-uri'
     doc = Nokogiri::HTML(open("http://www.brynmawrfilm.org/films/?cat=9"))

@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
+gem 'paperclip'
 gem "delayed_job_active_record"
 gem "simple_calendar", "~> 2.0"
 gem 'gracenote'

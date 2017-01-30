@@ -17,3 +17,9 @@
 <%= form_tag 'scrape_colonial' do %>
 	<%= submit_tag "Scrape Colonial", class: "btn" %>
 <% end %>
+
+<%= form_for Post.new do |f| %>
+
+<%= f.select(:screening, options_for_select(@screenings.title)) %>
+
+<% end %>
