@@ -11,6 +11,6 @@ post 'screenings/scrape_ihouse'
 post 'screenings/scrape_colonial'
 
 
-resources :screenings, :posts
+resources :screenings, :posts, :home
 
 end
