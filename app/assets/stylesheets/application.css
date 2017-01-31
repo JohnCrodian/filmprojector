@@ -48,4 +48,35 @@
 	
 }
 
+.simple-calendar {
+
+  .day {}
+
+  .wday-0 {}
+  .wday-1 {}
+  .wday-2 {}
+  .wday-3 {}
+  .wday-4 {}
+  .wday-5 {}
+  .wday-6 {}
+
+  .today {}
+  .past {}
+  .future {}
+
+  .start-date {}
+
+  .prev-month {
+  	align-self: center;
+  }
+  .next-month { 
+  	align-self: center;
+  }
+  .current-month {
+  	align-self: center;
+  }
+
+  .has-events {}
+}
+
 

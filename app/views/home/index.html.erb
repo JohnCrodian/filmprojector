@@ -1,9 +1,17 @@
+
 <div class="calendar-container">
 <h2 class="subject-heading">What's showing today?</h2>
 
+<% if @screenings_today.empty? %>
+<p> <%= "Sorry, it looks like there aren't any screenings in the area today." %></p>
+<% else %>
 <% @screenings_today.each do |screening| %>
 	<p class="one-line-screening"> <a href= <%= screening.link %> > "<%=screening.title %>" at <%= screening.location %></a></p>
 <% end %>
+<% end %>
+
+<div class="cool-clear">
+</div>
 
 <h2 class="subject-heading">Selected Screenings</h2>
 
@@ -12,15 +20,18 @@
 <div class="card-group">
 <% @posts.last(3).each do |highlight| %>
   <div class="card">
-  	
-  <h3 class="card-date"> <%= highlight.screenings[0].showtime.strftime('%A, %B %d') %> </h3>
+  <a href=<%= highlight.screenings[0].link %> >	
+  
     <img class="card-img-top" src=<%= highlight.avatar %> >
-    <div class="card-block">
-      <h4 class="card-title">"<%= highlight.screenings[0].title %>" at <%= highlight.screenings[0].location %></h4>
-      </div>
+     <span class="text-content"><span><%= highlight.screenings[0].showtime.strftime('%A, %B %d') %>: "<%= highlight.screenings[0].title %>" @ <%= highlight.screenings[0].location %> </span></span>
+
+    </a>
     </div>
    
   <% end %>
   </div>
 
+
+</div>
+<div class="cool-clear">
 </div>

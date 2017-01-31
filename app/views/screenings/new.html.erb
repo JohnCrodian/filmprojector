@@ -1,25 +1,62 @@
-<%= form_tag 'scrape_bryn_mawr' do %>
-	<%= submit_tag "Scrape Bryn Mawr", class: "btn" %>
+<div class="calendar-container">
+<h2 class="subject-heading">Welcome, Benevolent Webmaster</h2>
+<div class="form-fun">
+<h3>Populate Database</h3>
+	<%= form_tag 'scrape_bryn_mawr' do %>
+		<%= submit_tag "Scrape Bryn Mawr", class: "btn" %>
+	<% end %>
+
+	<%= form_tag 'scrape_roxy' do %>
+		<%= submit_tag "Scrape Roxy", class: "btn" %>
+	<% end %>
+
+	<%= form_tag 'scrape_ambler' do %>
+		<%= submit_tag "Scrape Ambler", class: "btn" %>
+	<% end %>
+
+	<%= form_tag 'scrape_ihouse' do %>
+		<%= submit_tag "Scrape I-House", class: "btn" %>
+	<% end %>
+
+	<%= form_tag 'scrape_colonial' do %>
+		<%= submit_tag "Scrape Colonial", class: "btn" %>
+	<% end %>
+</div>
+
+
+<div class="form-fun">
+<h3>Manual Input for Screenings</h3>
+
+<%= form_for @screening do |f| %>
+	
+		
+	<%= f.label :title, value: "Title: " %>
+	<%= f.text_field :title %><br>
+
+	<%= f.label :showtime, value: "Date: " %>
+	<%= f.date_select :showtime %><br>
+
+	<%= f.label :location, value: "Location: " %>
+	<%= f.text_field :location %><br>
+
+	<%= f.label :link, value: "Link: " %>
+	<%= f.text_field :link %><br>
+
+	<%= f.submit "Create Screening" %>
+
 <% end %>
+</div>
 
-<%= form_tag 'scrape_roxy' do %>
-	<%= submit_tag "Scrape Roxy", class: "btn" %>
-<% end %>
+<div class="form-fun">
+<h3>Posts</h3>
 
-<%= form_tag 'scrape_ambler' do %>
-	<%= submit_tag "Scrape Ambler", class: "btn" %>
-<% end %>
+<button type="button"><a href='/posts/new'>New Select Screening</a></button>
 
-<%= form_tag 'scrape_ihouse' do %>
-	<%= submit_tag "Scrape I-House", class: "btn" %>
-<% end %>
+</div>
+</div>
 
-<%= form_tag 'scrape_colonial' do %>
-	<%= submit_tag "Scrape Colonial", class: "btn" %>
-<% end %>
+<div class="cool-clear">
+</div>
 
-<%= form_for Post.new do |f| %>
 
-<%= f.select(:screening, options_for_select(@screenings.title)) %>
 
-<% end %>

@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-	
+http_basic_authenticate_with :name => "KingJohn", :password => "password", only: [:new]	
 	def new
 		@screenings = Screening.all
 		@post = Post.new

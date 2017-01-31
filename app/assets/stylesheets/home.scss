@@ -3,8 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .card-img-top {
-	height: 300px;
-	width: 200px;
+	height: 500px;
+	width: 350px;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -17,23 +17,61 @@
 	
 }
 
+.cool-clear {
+	height: 50px;
+}
+
 .subject-heading {
 	font-family: "Permanent Marker" 
 }
 
+// 
 .card-group {
 	width: 95%;
+	height: 450px;
+	border-radius: 5px;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 25px;
 }
 .card {
 	height: 420px;
 	display: inline-block;
+	position: relative;
 	float: left;
 	width: 350px;
-	align: center;
-	border: 2px solid black;
-	border-radius: 5px;
 	margin: 10px;
-	text-align: center;
+	-webkit-transition: margin 0.3s ease-out;
+    -moz-transition: margin 0.3s ease-out;
+    -o-transition: margin 0.3s ease-out;
+
+}
+
+.card:hover {
+    margin-top: 5px;
+}
+
+span.text-content {
+  background: rgba(0,0,0,0.6);
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  height: 500px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 350px;
+  opacity: 0;
+  -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  transition: opacity 500ms;
+}
+
+span.text-content span {
+  font-size: 24px;
+}
+
+div.card:hover span.text-content {
+  opacity: 1;
 }

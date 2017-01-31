@@ -1,17 +1,19 @@
 class ScreeningsController < ApplicationController
-  
+http_basic_authenticate_with :name => "KingJohn", :password => "password", only: [:new]
   def new
+    @screening = Screening.new
   end
+
+  def create
+    @screening = Screening.new(screening_params)
+    @screening.save
+  end
+
 
   def show
   	@screenings = Screening.order(:showtime)
   end
 
-  def create_post
-    @post = Post.new
-    @screenings = Screening.all
-
-  end
 
   def scrape_bryn_mawr
     require 'open-uri'
@@ -99,3 +101,8 @@ end
         end
     end
 
+private 
+
+ def screening_params
+  params.require(:screening).permit(:title, :showtime, :location, :link)
+end

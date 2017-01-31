@@ -1,9 +1,21 @@
-<%= form_for Post.new do |f| %>
+<div class="calendar-container">
+	<h2 class="subject-heading">New Select Screening</h2>
+		<div class="cool-clear">
+			</div>
+				<%= form_for Post.new do |f| %>
 
-<%= f.select(:screenings, options_from_collection_for_select(@screenings, 'id', 'title')) %><br>
+				<%= f.select(:screenings, options_from_collection_for_select(@screenings, 'id', 'title')) %>
 
-<%= f.label :avatar %><br>
-<%= f.file_field :avatar %>
-<%= f.submit "Make Post" %>
+				<div class="cool-clear">
+						</div>
 
-<% end %>
+				<%= f.label :avatar %><br>
+				<%= f.file_field :avatar %>
+				<%= f.submit "Make Post" %>
+
+				<% end %>
+				</div>
+
+
+<div class="cool-clear">
+	</div>

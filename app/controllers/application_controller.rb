@@ -9,6 +9,9 @@ class ApplicationController < ActionController::Base
     		month = "0" + month
     	end
     day = params[:search]["date(3i)"]
+    	if day.length < 2
+    		day = "0" + day
+    	end
     date = "#{year}-#{month}-#{day}"
     @searchDate = date.to_date.strftime("%m/%d/%y")
     @screenings = Screening.where("showtime LIKE (?)", date)

@@ -1,6 +1,10 @@
 <div class="calendar-container">
 	<h1 class="subject-heading">What's showing on <%= @searchDate %></h1>
-	<% @screenings.each do |screening| %>
+	<% if @screenings.empty? %>
+		<p> <%= "Sorry, it looks like there aren't any screenings in the area on this day." %></p>
+	<% else %>
+		<% @screenings.each do |screening| %>
 		<p><a href=<%=screening.link %> > "<%= screening.title %>" at <%= screening.location %></a></p>
+	<% end %>
 	<% end %>
 </div>
