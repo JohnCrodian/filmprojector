@@ -20,24 +20,27 @@
 	</div>
 </div>
 
+
 <nav class="navbar navbar-default">
   <div class="container-fluid">
-    <div class="navbar-header">
-    <a href='/'><button type="button" class="btn btn-default navbar-btn">Home</button></a>
+    <!-- Brand and toggle get grouped for better mobile display -->
 
 
-    <a href='/screenings/show'><button type="button" class="btn btn-default navbar-btn">View Screenings by Month</button></a>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/screenings/show">View Showing by Month</a></li>
+        <li><%= form_tag(application_search_path, :method => "get", id: "search-form") do %>
+		<%= text_field :search, "date", "data-provide" => "datepicker" %>
+	    <%= submit_tag "View Screenings by Date", :name => nil, :class => "submit-button" %>
+	    	<% end %></li>
 
-    	<button type="button" class="btn btn-default navbar-btn">
-    	<%= form_tag(application_search_path, :method => "get", id: "search-form") do %>
-		 <%= text_field :search, "date", "data-provide" => "datepicker" %>
-	    <%= submit_tag "View Screenings by Date", :name => nil %>
-		<% end %>
+	    <li><a href='/home/show'>About</a></li>
+      </ul>
 
-		<a href='/home/show'><button type="button" class="btn btn-default navbar-btn">About</button></a>
-
-	</div>
-  </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
 </nav>
 
     <%= yield %>

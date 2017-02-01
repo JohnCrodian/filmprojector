@@ -86,10 +86,12 @@ div.card:hover span.text-content {
 	list-style: none;
 	display: inline-block;
 	float: left;
+	font-size: 10pt;
 }
 
 .theatre-box2 {
-	border-radius: 5px;
+	padding: 5px;
+	border-radius: 10px;
 	width: 95%;
 	height: 300px;
 	margin-top: 20px;
@@ -104,7 +106,10 @@ div.card:hover span.text-content {
 	padding-left: 10px;
 	padding-right: 10px;
 	padding-bottom: 10px;
-	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	width: 95%;
 	height: 400px;
-	background-image: url("popcorn.jpg")
+	background-image: url("popcorn.jpg");
+	background-size: 100% 100%
 }

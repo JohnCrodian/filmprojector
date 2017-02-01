@@ -3,7 +3,7 @@
   <%= date.strftime("%d") %>
 
   <% screenings.each do |screening| %>
-    <div>
+    <div class="calendar-screening">
     <a href=<%= screening.link %> >"<%= screening.title %>" @ <%= screening.location %> </a>
     </div>
   <% end %>
