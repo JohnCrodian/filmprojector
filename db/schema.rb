@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20170130164529) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "calendars", force: :cascade do |t|
     t.date     "start_time"
     t.datetime "created_at", null: false
@@ -29,8 +32,8 @@ ActiveRecord::Schema.define(version: 20170130164529) do
   create_table "posts_screenings", force: :cascade do |t|
     t.integer "screening_id"
     t.integer "post_id"
-    t.index ["post_id"], name: "index_posts_screenings_on_post_id"
-    t.index ["screening_id"], name: "index_posts_screenings_on_screening_id"
+    t.index ["post_id"], name: "index_posts_screenings_on_post_id", using: :btree
+    t.index ["screening_id"], name: "index_posts_screenings_on_screening_id", using: :btree
   end
 
   create_table "screenings", force: :cascade do |t|
@@ -40,4 +43,6 @@ ActiveRecord::Schema.define(version: 20170130164529) do
     t.string "link"
   end
 
+  add_foreign_key "posts_screenings", "posts"
+  add_foreign_key "posts_screenings", "screenings"
 end
