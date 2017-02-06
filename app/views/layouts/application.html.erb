@@ -30,9 +30,9 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="/">Home</a></li>
-        <li><a href="/screenings/show">View Showing by Month</a></li>
+        <li><a href="/screenings/show">View Screenings by Month</a></li>
         <li><%= form_tag(application_search_path, :method => "get", id: "search-form") do %>
-		<%= text_field :search, "date", "data-provide" => "datepicker" %>
+		<%= text_field :search, "date", "data-provide" => "datepicker", placeholder: "Enter date here", :class => "text_field" %>
 	    <%= submit_tag "View Screenings by Date", :name => nil, :class => "submit-button" %>
 	    	<% end %></li>
 

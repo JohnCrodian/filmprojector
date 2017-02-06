@@ -5,7 +5,6 @@
 .card-img-top {
 	height: 500px;
 	width: 350px;
-	display: block;
 	margin-left: auto;
 	margin-right: auto;
 
@@ -31,7 +30,6 @@
 	font-size: 50px; 
 }
 
-// 
 .card-group {
 	width: 95%;
 	height: 450px;
@@ -102,6 +100,9 @@ div.card:hover span.text-content {
 }
 
 .theatre-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	padding-top: 10px;
 	padding-left: 10px;
 	padding-right: 10px;
@@ -110,6 +111,29 @@ div.card:hover span.text-content {
 	margin-left: auto;
 	width: 95%;
 	height: 400px;
-	background-image: url("popcorn.jpg");
-	background-size: 100% 100%
+	background-image: image-url("popcorn.jpg");
+	background-size: 100%;
 }
+
+
+@media all and (max-width: 1100px) {
+
+	.card-img-top {
+	height: 300px;
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+
+	}
+
+	.card {
+		height: 300px;
+		width: 200px;
+	}
+
+	.cool-clear {
+		display: none;
+	}
+
+}
+

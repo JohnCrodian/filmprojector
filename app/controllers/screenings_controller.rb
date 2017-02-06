@@ -1,5 +1,5 @@
 class ScreeningsController < ApplicationController
-http_basic_authenticate_with :name => "KingJohn", :password => "password", only: [:new]
+http_basic_authenticate_with :name => "JohnisKing", :password => "password", only: [:new]
   def new
     @screening = Screening.new
   end

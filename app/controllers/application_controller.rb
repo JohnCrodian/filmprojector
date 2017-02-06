@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
 
 
   def search 
+
     date = params[:search][:date]
     year = date.last(4).to_s
     month = date.first(2).to_s
@@ -12,6 +13,7 @@ class ApplicationController < ActionController::Base
 	standardDate = datebuild.to_date
     @searchDate = standardDate.strftime('%A, %B %d')
     @screenings = Screening.where("showtime LIKE (?)", standardDate)
+
 
   end
 

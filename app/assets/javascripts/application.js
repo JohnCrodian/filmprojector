@@ -17,4 +17,15 @@
 
 //= require bootstrap-datepicker
 
+$(document).ready(function(){
+
+$('.submit-button').prop('disabled', true);
+
+$('.text_field').change(function(){
+    if($('.text_field').val() !=  "") 
+         $('.submit-button').prop('disabled', false);    
+    else
+         $('.submit-button').prop('disabled', true);   
+	});
+});
 

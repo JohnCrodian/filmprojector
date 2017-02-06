@@ -33,7 +33,7 @@
 }
 .hero-unit {
 	height: 400px;
-	background-image: url('seats1.jpg');
+	background-image: url("seats1.jpg");
 	background-size: 100% 100%;
 }
 
@@ -84,11 +84,18 @@
 }
 
 .submit-button {
-
+  margin-top: 3px;
+  border-width: 0;
+  background: none;
+  color: #777;
 }
 
 .big-clear {
   height: 400px;
 }
+
+
+
+
 
 
