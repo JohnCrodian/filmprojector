@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
 	datebuild = "#{year}" "-" "#{month}" "-" "#{day}"
 	standardDate = datebuild.to_date
     @searchDate = standardDate.strftime('%A, %B %d')
-    @screenings = Screening.where("showtime LIKE (?)", standardDate)
+    @screenings = Screening.where("to_char(showtime, 'YYYY-MM-DD') LIKE ?", datebuild)
 
 
   end
