@@ -27,6 +27,7 @@
 <div class="form-fun">
 <h3>Manual Input for Screenings</h3>
 
+<% unless @screening.nil? %>
 <%= form_for @screening do |f| %>
 	
 		
@@ -44,6 +45,7 @@
 
 	<%= f.submit "Create Screening" %>
 
+<% end %>
 <% end %>
 </div>
 

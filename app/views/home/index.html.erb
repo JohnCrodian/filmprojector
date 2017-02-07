@@ -3,7 +3,7 @@
 
 <h2 class="subject-heading">What's showing today?</h2>
 
-
+<% unless @screenings_today.nil? %>
 <% if @screenings_today.empty? %>
 <p> <%= "Sorry, it looks like there aren't any screenings in the area today." %></p>
 <% else %>
@@ -11,13 +11,14 @@
 	<p class="one-line-screening"> <a href= <%= screening.link %> > "<%=screening.title %>" at <%= screening.location %></a></p>
 <% end %>
 <% end %>
-
+<% end %>
 <div class="cool-clear">
 </div>
 
 <h2 class="subject-heading">Selected Screenings</h2>
 
 <div class="card-group">
+<% unless @posts.nil? %>
 <% @posts.last(3).each do |highlight| %>
   <div class="card">
   <a href=<%= highlight.screenings[0].link %> >	
@@ -28,6 +29,7 @@
     </a>
     </div>
    
+  <% end %>
   <% end %>
   </div>
 
