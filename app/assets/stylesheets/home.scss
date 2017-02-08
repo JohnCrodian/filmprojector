@@ -31,6 +31,8 @@
 }
 
 .card-group {
+	display: flex;
+	justify-content: left;
 	width: 95%;
 	height: 450px;
 	border-radius: 5px;
@@ -40,9 +42,8 @@
 }
 .card {
 	height: 500px;
-	display: inline-block;
+	display: inline-flex;
 	position: relative;
-	float: left;
 	width: 350px;
 	margin: 10px;
 	-webkit-transition: margin 0.3s ease-out;
@@ -118,36 +119,3 @@ div.card:hover span.text-content {
 }
 
 
-@media all and (max-width: 1200px) {
-	
-.card {
-	height: 300px;
-	width: 200px;
-	}
-
-span.text-content {
-	height: 300px;
-	width: 200px;	
-	}
-
-span.text-content span {
-  	font-size: 12px;
-	}
-}	
-
-
-@media all and (max-width: 400px) {
-
-	.card {
-		height: 100px;
-		width: 60px;
-	}
-
-	span.text-content {
-		height: 100px;
-		width: 60px;	
-	}
-	span.text-content span {
-  		font-size: 8px;
-	}
-}
