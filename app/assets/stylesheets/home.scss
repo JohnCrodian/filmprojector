@@ -96,11 +96,12 @@ div.card:hover span.text-content {
 	margin-bottom: 20px;
 	margin-right: 20px;
 	margin-left: 20px;
-	background-color:white;
+	background-color: white;
 }
 
 .theatre-box {
 	display: flex;
+	position: absolute;
 	justify-content: center;
 	align-items: center;
 	padding-top: 10px;
@@ -110,13 +111,14 @@ div.card:hover span.text-content {
 	margin-right: auto;
 	margin-left: auto;
 	width: 95%;
+	max-width: 2000px;
 	height: 400px;
 	background-image: image-url("popcorn.jpg");
 	background-size: 100%;
 }
 
 
-@media all and (max-width: 1100px) {
+@media all and (max-width: 800px) {
 
 	.card-img-top {
 	height: 300px;
