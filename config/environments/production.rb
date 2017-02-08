@@ -90,8 +90,8 @@ Rails.application.configure do
     s3_region: ENV.fetch('AWS_REGION'),
     s3_host_name: "s3-us-west-2.amazonaws.com"
   }
-    :url =>':s3_domain_url',
-    :path => ':class/:attachment/:id_partition/:style/:filename',
+    :url => ':s3_domain_url'
+    :path => ':class/:attachment/:id_partition/:style/:filename'
     
 }
 
