@@ -23,8 +23,7 @@
   <div class="card">
   <a href=<%= highlight.screenings[0].link %> >	
 
-    
-    <%= image_tag highlight.avatar, :class => "card-img-top" %>
+    <%= image_tag highlight.avatar.url, :class => "card-img-top" %>
    
      <span class="text-content"><span><%= highlight.screenings[0].showtime.strftime('%A, %B %d') %>: "<%= highlight.screenings[0].title %>" @ <%= highlight.screenings[0].location %> </span></span>
 
