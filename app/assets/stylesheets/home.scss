@@ -31,8 +31,6 @@
 }
 
 .card-group {
-	display: flex;
-	justify-content: left;
 	width: 95%;
 	height: 450px;
 	border-radius: 5px;
@@ -42,10 +40,9 @@
 }
 .card {
 	height: 500px;
-	display: inline-flex;
-	position: relative;
 	width: 350px;
 	margin: 10px;
+	float: left;
 	-webkit-transition: margin 0.3s ease-out;
     -moz-transition: margin 0.3s ease-out;
     -o-transition: margin 0.3s ease-out;
@@ -116,6 +113,29 @@ div.card:hover span.text-content {
 	height: 400px;
 	background-image: image-url("popcorn.jpg");
 	background-size: 100%;
+}
+
+@media all and (max-width: 1231px) {
+	
+	.card {
+		height: 300px;
+		width: 225px;
+	}
+
+span.text-content {
+
+  height: 300px;
+  width: 225px;
+
+	}
+
+span.text-content span {
+  font-size: 8px;
+	}
+.cool-clear {
+	display: none;
+}
+
 }
 
 
