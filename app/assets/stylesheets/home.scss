@@ -42,6 +42,7 @@
 	height: 500px;
 	width: 350px;
 	margin: 10px;
+	position: relative;
 	display: inline-block;
 	float: left;
 	-webkit-transition: margin 0.3s ease-out;
@@ -61,7 +62,7 @@ span.text-content {
   padding: 5px;
   height: 500px;
   left: 0;
-  position: relative;
+  position: absolute;
   top: 0;
   width: 350px;
   opacity: 0;
