@@ -86,7 +86,7 @@ end
     require 'open-uri'
 
       ["classics", "fright-night", "cult-cinema", "young-audiences"].each do |page|
-        doc = Nokogiri::HTML(open("https://thecolonialtheatre.com/programs-categories/programs-#{page}/"))
+        doc = Nokogiri::HTML(open("https://thecolonialtheatre.com/programs-categories/#{page}/"))
         screening = doc.css('.entry-header-other')
         screening.each do |entry|
           title = entry.css('.entry-title').text
